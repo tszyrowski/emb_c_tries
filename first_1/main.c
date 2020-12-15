@@ -1,23 +1,11 @@
 
 int main(){ 
     unsigned int counter = 0;
-    ++counter; 
-    ++counter;
-    ++counter;
-    ++counter; 
-    ++counter;
-    ++counter;
-    ++counter; 
-    ++counter;
-    ++counter;
-    ++counter; 
-    ++counter;
-    ++counter;
-    ++counter; 
-    ++counter;
-    ++counter;
-    ++counter; 
-    ++counter;
-    ++counter;
+    while (counter < 20) {
+        ++counter;
+        if ((counter & 1) != 0){
+            
+        }
+    }
     return 0;
 }

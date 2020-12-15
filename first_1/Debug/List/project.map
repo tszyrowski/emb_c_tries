@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.50.9.278/W32 for ARM                  15/Dec/2020  19:30:51
+# IAR ELF Linker V8.50.9.278/W32 for ARM                  15/Dec/2020  19:53:54
 # Copyright 2007-2020 IAR Systems AB.
 #
 #    Output file  =
@@ -8,7 +8,7 @@
 #    Map file     =
 #        C:\Users\tszyr\embedded_workspace\emb_c_tries\first_1\Debug\List\project.map
 #    Command line =
-#        -f C:\Users\tszyr\AppData\Local\Temp\EWD7CD.tmp
+#        -f C:\Users\tszyr\AppData\Local\Temp\EWF25B.tmp
 #        (C:\Users\tszyr\embedded_workspace\emb_c_tries\first_1\Debug\Obj\main.o
 #        --no_out_extension -o
 #        C:\Users\tszyr\embedded_workspace\emb_c_tries\first_1\Debug\Exe\project.out
@@ -61,16 +61,16 @@ No sections matched the following patterns:
   .intvec   ro code          0x0    0x40  vector_table_M.o [3]
                           - 0x40    0x40
 
-"P1":                               0x90
-  .text     ro code         0x40    0x2a  main.o [1]
-  .text     ro code         0x6a     0x2  vector_table_M.o [3]
-  .text     ro code         0x6c    0x1e  cmain.o [3]
-  .text     ro code         0x8a     0x4  low_level_init.o [2]
-  .text     ro code         0x8e     0x4  exit.o [2]
-  .text     ro code         0x94     0xa  cexit.o [3]
-  .text     ro code         0xa0    0x14  exit.o [4]
-  .text     ro code         0xb4    0x1c  cstartup_M.o [3]
-                          - 0xd0    0x90
+"P1":                               0x74
+  .text     ro code         0x40    0x1e  cmain.o [3]
+  .text     ro code         0x5e     0x4  low_level_init.o [2]
+  .text     ro code         0x62    0x12  main.o [1]
+  .text     ro code         0x74     0x4  exit.o [2]
+  .text     ro code         0x78     0xa  cexit.o [3]
+  .text     ro code         0x82     0x2  vector_table_M.o [3]
+  .text     ro code         0x84    0x14  exit.o [4]
+  .text     ro code         0x98    0x1c  cstartup_M.o [3]
+                          - 0xb4    0x74
 
 "P2":                             0x1000
   CSTACK             0x2000'0000  0x1000  <Block>
@@ -81,7 +81,7 @@ Unused ranges:
 
          From           To      Size
          ----           --      ----
-         0xd0     0x3'ffff  0x3'ff30
+         0xb4     0x3'ffff  0x3'ff4c
   0x2000'1000  0x2000'7fff    0x7000
 
 
@@ -97,9 +97,9 @@ command line/config:
     Total:
 
 C:\Users\tszyr\embedded_workspace\emb_c_tries\first_1\Debug\Obj: [1]
-    main.o                 42
+    main.o                 18
     ----------------------------------
-    Total:                 42
+    Total:                 18
 
 dl7M_tln.a: [2]
     exit.o                  4
@@ -120,10 +120,9 @@ shb_l.a: [4]
     ----------------------------------
     Total:                 20
 
-    Gaps                    4
     Linker created               4'096
 --------------------------------------
-    Grand Total:          208    4'096
+    Grand Total:          180    4'096
 
 
 *******************************************************************************
@@ -132,21 +131,21 @@ shb_l.a: [4]
 
 Entry                     Address  Size  Type      Object
 -----                     -------  ----  ----      ------
-?main                        0x6d        Code  Gb  cmain.o [3]
+?main                        0x41        Code  Gb  cmain.o [3]
 CSTACK$$Base          0x2000'0000         --   Gb  - Linker created -
 CSTACK$$Limit         0x2000'1000         --   Gb  - Linker created -
 Region$$Table$$Base           0x0         --   Gb  - Linker created -
 Region$$Table$$Limit          0x0         --   Gb  - Linker created -
-__cmain                      0x6d        Code  Gb  cmain.o [3]
-__exit                       0xa1  0x14  Code  Gb  exit.o [4]
-__iar_program_start          0xb5        Code  Gb  cstartup_M.o [3]
-__low_level_init             0x8b   0x4  Code  Gb  low_level_init.o [2]
+__cmain                      0x41        Code  Gb  cmain.o [3]
+__exit                       0x85  0x14  Code  Gb  exit.o [4]
+__iar_program_start          0x99        Code  Gb  cstartup_M.o [3]
+__low_level_init             0x5f   0x4  Code  Gb  low_level_init.o [2]
 __vector_table                0x0        Data  Gb  vector_table_M.o [3]
-_call_main                   0x79        Code  Gb  cmain.o [3]
-_exit                        0x95        Code  Gb  cexit.o [3]
-_main                        0x83        Code  Gb  cmain.o [3]
-exit                         0x8f   0x4  Code  Gb  exit.o [2]
-main                         0x41  0x2a  Code  Gb  main.o [1]
+_call_main                   0x4d        Code  Gb  cmain.o [3]
+_exit                        0x79        Code  Gb  cexit.o [3]
+_main                        0x57        Code  Gb  cmain.o [3]
+exit                         0x75   0x4  Code  Gb  exit.o [2]
+main                         0x63  0x12  Code  Gb  main.o [1]
 
 
 [1] = C:\Users\tszyr\embedded_workspace\emb_c_tries\first_1\Debug\Obj
@@ -154,7 +153,7 @@ main                         0x41  0x2a  Code  Gb  main.o [1]
 [3] = rt7M_tl.a
 [4] = shb_l.a
 
-    208 bytes of readonly  code memory
+    180 bytes of readonly  code memory
   4'096 bytes of readwrite data memory
 
 Errors: none
