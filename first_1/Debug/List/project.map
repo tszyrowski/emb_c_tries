@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.50.9.278/W32 for ARM                  15/Dec/2020  21:45:50
+# IAR ELF Linker V8.50.9.278/W32 for ARM                  16/Dec/2020  13:51:31
 # Copyright 2007-2020 IAR Systems AB.
 #
 #    Output file  =
@@ -8,7 +8,7 @@
 #    Map file     =
 #        C:\Users\tszyr\embedded_workspace\emb_c_tries\first_1\Debug\List\project.map
 #    Command line =
-#        -f C:\Users\tszyr\AppData\Local\Temp\EW6D2B.tmp
+#        -f C:\Users\tszyr\AppData\Local\Temp\EW88CE.tmp
 #        (C:\Users\tszyr\embedded_workspace\emb_c_tries\first_1\Debug\Obj\main.o
 #        --no_out_extension -o
 #        C:\Users\tszyr\embedded_workspace\emb_c_tries\first_1\Debug\Exe\project.out
@@ -50,54 +50,39 @@ define block HEAP with size = 8K, alignment = 8 { };
 "P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
           rw, block CSTACK, block HEAP };
 
-  Section          Kind         Address    Size  Object
-  -------          ----         -------    ----  ------
-"A0":                                      0x40
-  .intvec          ro code          0x0    0x40  vector_table_M.o [3]
-                                 - 0x40    0x40
+No sections matched the following patterns:
 
-"P1":                                     0x100
-  .text            ro code         0x40    0x3a  zero_init3.o [3]
-  .text            ro code         0x7a     0x2  vector_table_M.o [3]
-  .text            ro code         0x7c    0x28  main.o [1]
-  .text            ro code         0xa4    0x28  data_init.o [3]
-  .iar.init_table  const           0xcc    0x10  - Linker created -
-  .text            ro code         0xdc    0x1e  cmain.o [3]
-  .text            ro code         0xfa     0x4  low_level_init.o [2]
-  .text            ro code         0xfe     0x4  exit.o [2]
-  .text            ro code        0x104     0xa  cexit.o [3]
-  .text            ro code        0x110    0x14  exit.o [4]
-  .text            ro code        0x124    0x1c  cstartup_M.o [3]
-  .rodata          const          0x140     0x0  zero_init3.o [3]
-                                - 0x140   0x100
+  rw  in "P2"
 
-"P2", part 1 of 2:                          0x4
-  .bss             zero     0x2000'0000     0x4  main.o [1]
-                          - 0x2000'0004     0x4
 
-"P2", part 2 of 2:                       0x1000
-  CSTACK                    0x2000'0008  0x1000  <Block>
-    CSTACK         uninit   0x2000'0008  0x1000  <Block tail>
-                          - 0x2000'1008  0x1000
+  Section   Kind         Address    Size  Object
+  -------   ----         -------    ----  ------
+"A0":                               0x40
+  .intvec   ro code          0x0    0x40  vector_table_M.o [3]
+                          - 0x40    0x40
+
+"P1":                               0xac
+  .text     ro code         0x40    0x48  main.o [1]
+  .text     ro code         0x88    0x1e  cmain.o [3]
+  .text     ro code         0xa6     0x4  low_level_init.o [2]
+  .text     ro code         0xaa     0x4  exit.o [2]
+  .text     ro code         0xae     0x2  vector_table_M.o [3]
+  .text     ro code         0xb0     0xa  cexit.o [3]
+  .text     ro code         0xbc    0x14  exit.o [4]
+  .text     ro code         0xd0    0x1c  cstartup_M.o [3]
+                          - 0xec    0xac
+
+"P2":                             0x1000
+  CSTACK             0x2000'0000  0x1000  <Block>
+    CSTACK  uninit   0x2000'0000  0x1000  <Block tail>
+                   - 0x2000'1000  0x1000
 
 Unused ranges:
 
          From           To      Size
          ----           --      ----
-        0x140     0x3'ffff  0x3'fec0
-  0x2000'0004  0x2000'0007       0x4
-  0x2000'1008  0x2000'7fff    0x6ff8
-
-
-*******************************************************************************
-*** INIT TABLE
-***
-
-          Address      Size
-          -------      ----
-Zero (__iar_zero_init3)
-    1 destination range, total size 0x4:
-          0x2000'0000   0x4
+         0xec     0x3'ffff  0x3'ff14
+  0x2000'1000  0x2000'7fff    0x7000
 
 
 
@@ -105,70 +90,63 @@ Zero (__iar_zero_init3)
 *** MODULE SUMMARY
 ***
 
-    Module            ro code  ro data  rw data
-    ------            -------  -------  -------
+    Module            ro code  rw data
+    ------            -------  -------
 command line/config:
-    -------------------------------------------
+    ----------------------------------
     Total:
 
 C:\Users\tszyr\embedded_workspace\emb_c_tries\first_1\Debug\Obj: [1]
-    main.o                 40                 4
-    -------------------------------------------
-    Total:                 40                 4
+    main.o                 72
+    ----------------------------------
+    Total:                 72
 
 dl7M_tln.a: [2]
     exit.o                  4
     low_level_init.o        4
-    -------------------------------------------
+    ----------------------------------
     Total:                  8
 
 rt7M_tl.a: [3]
     cexit.o                10
     cmain.o                30
     cstartup_M.o           28
-    data_init.o            40
     vector_table_M.o       66
-    zero_init3.o           58
-    -------------------------------------------
-    Total:                232
+    ----------------------------------
+    Total:                134
 
 shb_l.a: [4]
     exit.o                 20
-    -------------------------------------------
+    ----------------------------------
     Total:                 20
 
-    Gaps                    4
-    Linker created                  16    4'096
------------------------------------------------
-    Grand Total:          304       16    4'100
+    Gaps                    2
+    Linker created               4'096
+--------------------------------------
+    Grand Total:          236    4'096
 
 
 *******************************************************************************
 *** ENTRY LIST
 ***
 
-Entry                       Address  Size  Type      Object
------                       -------  ----  ----      ------
-.iar.init_table$$Base          0xcc         --   Gb  - Linker created -
-.iar.init_table$$Limit         0xdc         --   Gb  - Linker created -
-?main                          0xdd        Code  Gb  cmain.o [3]
-CSTACK$$Base            0x2000'0008         --   Gb  - Linker created -
-CSTACK$$Limit           0x2000'1008         --   Gb  - Linker created -
-Region$$Table$$Base            0xcc         --   Gb  - Linker created -
-Region$$Table$$Limit           0xdc         --   Gb  - Linker created -
-__cmain                        0xdd        Code  Gb  cmain.o [3]
-__exit                        0x111  0x14  Code  Gb  exit.o [4]
-__iar_data_init3               0xa5  0x28  Code  Gb  data_init.o [3]
-__iar_program_start           0x125        Code  Gb  cstartup_M.o [3]
-__iar_zero_init3               0x41  0x3a  Code  Gb  zero_init3.o [3]
-__low_level_init               0xfb   0x4  Code  Gb  low_level_init.o [2]
-__vector_table                  0x0        Data  Gb  vector_table_M.o [3]
-_call_main                     0xe9        Code  Gb  cmain.o [3]
-_exit                         0x105        Code  Gb  cexit.o [3]
-_main                          0xf3        Code  Gb  cmain.o [3]
-counter                 0x2000'0000   0x4  Data  Gb  main.o [1]
-exit                           0xff   0x4  Code  Gb  exit.o [2]
-main                           0x7d  0x28  Code  Gb  main.o [1]
+Entry                     Address  Size  Type      Object
+-----                     -------  ----  ----      ------
+?main                        0x89        Code  Gb  cmain.o [3]
+CSTACK$$Base          0x2000'0000         --   Gb  - Linker created -
+CSTACK$$Limit         0x2000'1000         --   Gb  - Linker created -
+Region$$Table$$Base           0x0         --   Gb  - Linker created -
+Region$$Table$$Limit          0x0         --   Gb  - Linker created -
+__cmain                      0x89        Code  Gb  cmain.o [3]
+__exit                       0xbd  0x14  Code  Gb  exit.o [4]
+__iar_program_start          0xd1        Code  Gb  cstartup_M.o [3]
+__low_level_init             0xa7   0x4  Code  Gb  low_level_init.o [2]
+__vector_table                0x0        Data  Gb  vector_table_M.o [3]
+_call_main                   0x95        Code  Gb  cmain.o [3]
+_exit                        0xb1        Code  Gb  cexit.o [3]
+_main                        0x9f        Code  Gb  cmain.o [3]
+exit                         0xab   0x4  Code  Gb  exit.o [2]
+main                         0x41  0x48  Code  Gb  main.o [1]
 
 
 [1] = C:\Users\tszyr\embedded_workspace\emb_c_tries\first_1\Debug\Obj
@@ -176,9 +154,8 @@ main                           0x7d  0x28  Code  Gb  main.o [1]
 [3] = rt7M_tl.a
 [4] = shb_l.a
 
-    304 bytes of readonly  code memory
-     16 bytes of readonly  data memory
-  4'100 bytes of readwrite data memory
+    236 bytes of readonly  code memory
+  4'096 bytes of readwrite data memory
 
 Errors: none
 Warnings: none
