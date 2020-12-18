@@ -12,7 +12,7 @@ int main(){
     GPIO_PORTF_DATA_R = LED_BLUE;
     while (1) {
         // GPIO_PORTF_DATA_R = GPIO_PORTF_DATA_R | LED_RED;
-        GPIO_PORTF_DATA_R |= LED_RED;
+        *((unsigned long volatile *)(0x40025000 + (LED_RED << 2))) = LED_RED;
         int volatile counter = 0;
         while (counter < 500000){
             ++counter;
