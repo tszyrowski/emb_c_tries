@@ -2840,6 +2840,15 @@
         </settings>
     </configuration>
     <file>
+        <name>$PROJ_DIR$\core_cm4.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\lm4f120h5qr.h</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\main.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\TM4C123GH6PM.h</name>
     </file>
 </project>
