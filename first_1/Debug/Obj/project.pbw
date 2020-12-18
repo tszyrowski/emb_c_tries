@@ -73766,13 +73766,55 @@
     "scope": null
   },
   {
+    "ID": "c:main.c@36@macro@LED_RED",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LED_RED",
+    "location": {
+      "column": "9",
+      "line": "3",
+      "path": "C:\\Users\\tszyr\\embedded_workspace\\emb_c_tries\\first_1\\main.c"
+    },
+    "name": "LED_RED",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@65@macro@LED_BLUE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LED_BLUE",
+    "location": {
+      "column": "9",
+      "line": "4",
+      "path": "C:\\Users\\tszyr\\embedded_workspace\\emb_c_tries\\first_1\\main.c"
+    },
+    "name": "LED_BLUE",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@94@macro@LED_GREEN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LED_GREEN",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Users\\tszyr\\embedded_workspace\\emb_c_tries\\first_1\\main.c"
+    },
+    "name": "LED_GREEN",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@main",
     "What": "Function",
     "defdec": "Def",
     "display": "int main(void)",
     "location": {
       "column": "5",
-      "line": "3",
+      "line": "7",
       "path": "C:\\Users\\tszyr\\embedded_workspace\\emb_c_tries\\first_1\\main.c"
     },
     "name": "main",
@@ -73780,111 +73822,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@46@F@main@a",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "a",
-    "location": {
-      "column": "18",
-      "line": "4",
-      "path": "C:\\Users\\tszyr\\embedded_workspace\\emb_c_tries\\first_1\\main.c"
-    },
-    "name": "a",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@80@F@main@b",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "b",
-    "location": {
-      "column": "18",
-      "line": "5",
-      "path": "C:\\Users\\tszyr\\embedded_workspace\\emb_c_tries\\first_1\\main.c"
-    },
-    "name": "b",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@114@F@main@c",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "c",
-    "location": {
-      "column": "18",
-      "line": "6",
-      "path": "C:\\Users\\tszyr\\embedded_workspace\\emb_c_tries\\first_1\\main.c"
-    },
-    "name": "c",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@135@F@main@d",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "d",
-    "location": {
-      "column": "18",
-      "line": "7",
-      "path": "C:\\Users\\tszyr\\embedded_workspace\\emb_c_tries\\first_1\\main.c"
-    },
-    "name": "d",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@358@F@main@x",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "x",
-    "location": {
-      "column": "9",
-      "line": "18",
-      "path": "C:\\Users\\tszyr\\embedded_workspace\\emb_c_tries\\first_1\\main.c"
-    },
-    "name": "x",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@377@F@main@y",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "y",
-    "location": {
-      "column": "9",
-      "line": "19",
-      "path": "C:\\Users\\tszyr\\embedded_workspace\\emb_c_tries\\first_1\\main.c"
-    },
-    "name": "y",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@397@F@main@z",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "z",
-    "location": {
-      "column": "9",
-      "line": "20",
-      "path": "C:\\Users\\tszyr\\embedded_workspace\\emb_c_tries\\first_1\\main.c"
-    },
-    "name": "z",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@675@F@main@counter",
+    "ID": "c:main.c@456@F@main@counter",
     "What": "Variable",
     "defdec": "Def",
     "display": "counter",
     "location": {
       "column": "22",
-      "line": "33",
+      "line": "16",
       "path": "C:\\Users\\tszyr\\embedded_workspace\\emb_c_tries\\first_1\\main.c"
     },
     "name": "counter",
